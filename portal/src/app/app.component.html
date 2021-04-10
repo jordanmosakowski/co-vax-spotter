@@ -1,0 +1,12 @@
+<span class="title">Last updated: {{updated | date:'short'}}</span><br>
+<span class='{{settings.enabled ? "enabled" : "disabled"}}'>Scraper: {{settings.enabled ? "Enabled" : "Disabled"}}</span>
+<button *ngIf="!settings.enabled" class="button" (click)="apiCall('enable')">Enable</button>
+<button *ngIf="settings.enabled" class="button" (click)="apiCall('disable')">Disable</button><br>
+<span class='{{settings.checkLarge ? "enabled" : "disabled"}}'>Large: {{settings.checkLarge ? "Enabled" : "Disabled"}}</span>
+<button *ngIf="!settings.checkLarge" class="button" (click)="apiCall('enableLarge')">Enable</button>
+<button *ngIf="settings.checkLarge" class="button" (click)="apiCall('disableLarge')">Disable</button><br>
+<label class="checkbox">
+  <input type="checkbox" [(ngModel)]="filterAvailable">
+  Show only available
+</label><br>
+<app-provider-info [callback]="enableSave" *ngFor="let provider of keys()" [filterAvailable]="filterAvailable" [name]="provider" [locations]="providers[provider]"></app-provider-info>

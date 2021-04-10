@@ -1,0 +1,4 @@
+<h4 class="title is-4">In order to use this service, you must first log in with your email address.</h4>
+<input placeholder="email@example.com" class="input is-primary" type="email" [(ngModel)]="email" *ngIf="!sent">
+<button (click)="logIn()" class="button is-primary" *ngIf="!sent">Log in</button>
+<h5 class="subtitle is-5" *ngIf="sent">An email has been sent to {{email}}. Please follow the link in the email to finish logging in.</h5>

@@ -1,0 +1,9 @@
+.idea
+node_modules
+index.js
+.env
+*.cache
+portal/.firebaserc
+covaxspotter.json
+portal/firebase.json
+site/.firebaserc

@@ -1,0 +1,18 @@
+<h3 class="title is-3">Welcome {{user.email}} <button (click)="signOut()" class="button is-danger">Sign Out</button></h3>
+<h4 class="subtitle is-4">Got your appointment? <button (click)="removeAll()" class="button is-danger">Remove all notifications</button></h4>
+<label class="checkbox is-4 subtitle">
+  <input type="checkbox" [(ngModel)]="showRecommended">
+  Only show preferred locations
+</label><br>
+<input placeholder="Filter" class="input is-link" [(ngModel)]="search"><br>
+<button *ngIf="needsSave" (click)="save()" class="button is-success">Save</button>
+<div *ngFor="let provider of providerList()">
+  <h5 class="subtitle is-5" *ngIf="getFiltered(providers[provider]).length >0">{{provider}}</h5>
+  <div *ngFor="let location of getFiltered(providers[provider])">
+    <label class="checkbox">
+      <input type="checkbox" [(ngModel)]="firestoreData[location.id]" (ngModelChange)="needsSave = true">
+        {{getStoreTitle(location)}}
+<!--      {{location.address}}, {{location.city}}, {{location.zip}} ({{location.id}})-->
+    </label>
+  </div>
+</div>

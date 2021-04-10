@@ -1,0 +1,46 @@
+.title.is-3{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+  padding: 3px;
+}
+.title.is-3:hover{
+  cursor: pointer;
+}
+
+.title.is-3.avail{
+  color: #008000;
+}
+:host{
+}
+.header{
+  font-size: 1.2rem;
+}
+.header, .url{
+  font-weight: bold;
+}
+.header.avail{
+  color: #008000;
+}
+
+a{
+  color: inherit;
+}
+.indented{
+  padding-left: 20px;
+}
+
+.open{
+  text-decoration: underline;
+}
+main{
+  margin-top: 20px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+svg{
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+}
