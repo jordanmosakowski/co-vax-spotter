@@ -4,7 +4,7 @@ A program for helping people in Colorado find vaccines in their area.
 
 ## Usage
 
-Sign in at https://covaxspotter.web.app/, select the locations you want to receive notifications at, and you're all set!
+Sign in at https://covaxspotter.web.app/, select the locations you want to receive notifications for, click Save, and you're all set!
 
 ## Development
 
